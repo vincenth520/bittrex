@@ -50,6 +50,49 @@ array(1) {
 }
 ```
 
+### 获取币种当前行情
+```php
+use Bittrex\Bittrex;
+
+$apikey='';
+$apisecret='';
+
+$Bittrex = new Bittrex($apikey,$apisecret);
+
+$LTC = $Bittrex->getticker('BTC-LTC');
+var_dump($LTC);
+```
+
+**打印**
+```
+array(3) {
+  ["Bid"]=>
+  float(0.01010001)
+  ["Ask"]=>
+  float(0.01011903)
+  ["Last"]=>
+  float(0.01010001)
+}
+```
+
+### 获取比特币当前价格
+```php
+use Bittrex\Bittrex;
+
+$apikey='';
+$apisecret='';
+
+$Bittrex = new Bittrex($apikey,$apisecret);
+
+$BTC = $Bittrex->getBtcPrice();
+var_dump($BTC);
+```
+
+**打印**
+```
+float(5073.4288)
+```
+
 
 ## 代码许可
 The MIT License (MIT).详情见 [License文件](https://github.com/vincenth520/bittrex/blob/master/LICENSE).
