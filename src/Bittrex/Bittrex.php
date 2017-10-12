@@ -14,7 +14,7 @@ class Bittrex
     }
 
     //获取btc当前价格
-    function getBtcPrice()
+    public function getBtcPrice()
     {
         $url = 'v2.0/pub/currencies/GetBTCPrice';
         $data = $this->auth->reqPublic($url);
@@ -36,7 +36,7 @@ class Bittrex
             exit(json_encode($data['result']));
         }
     }
-    
+
     //获取账户余额
     public function getBalance()
     {
@@ -57,8 +57,8 @@ class Bittrex
                 $newbalance[$k]['balance'] = $v['Balance'];
                 $ticker = $this->getticker('BTC-'.$v['Currency']);
                 $newbalance[$k]['Last'] = $ticker['Last'];
-                $newbalance[$k]['estbtc'] = $v['Balance'] * $ticker['Last'];
-                $newbalance[$k]['estusd'] = $newbalance[$k]['estbtc'] * $btcPrice;            
+                $newbalance[$k]['est.btc'] = $v['Balance'] * $ticker['Last'];
+                $newbalance[$k]['est.usd'] = $newbalance[$k]['estbtc'] * $btcPrice;            
             }
             return $newbalance;
         }else{
