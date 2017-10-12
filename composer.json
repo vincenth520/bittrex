@@ -18,8 +18,8 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"Bittrex\\Auth\\": "src/Auth",
-			"Bittrex\\Function\\": "src/Function",
+			"Bittrex\\Auth\\": "src/Bittrex/Auth",
+			"Bittrex\\Function\\": "src/Bittrex/Function"
 		}
 	},
 	"time": "2017-10-12 10:41:00"
