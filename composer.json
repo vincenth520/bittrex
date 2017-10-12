@@ -1,0 +1,26 @@
+{
+	"name": "vincenth520/bittrex",
+	"description": "bittrex Api SDK for PHP",
+	"version": "1.0.0",
+	"type": "library",
+	"keywords": ["bittrex","API","bitcoin"],
+	"homepage": "https://github.com/vincenth520",
+	"license": "MIT",
+	"author": [
+		{
+			"name": "vincent",
+			"email": "1091986039@qq.com",
+			"homepage": "https://github.com/vincenth520"
+		}
+	],
+	"require": {
+		"php": ">=5.3.3"
+	},
+	"autoload": {
+		"psr-4": {
+			"Bittrex\\Auth\\": "src/Auth",
+			"Bittrex\\Function\\": "src/Function",
+		}
+	},
+	"time": "2017-10-12 10:41:00"
+}
