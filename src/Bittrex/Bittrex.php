@@ -25,6 +25,18 @@ class Bittrex
         }
     }
 
+    //获取币种情况
+    public function getticker($type)
+    {
+        $url = 'v1.1/public/getticker?market='.$type;
+        $data = $this->auth->reqPublic($url);
+        if($data['success']){
+            return $data['result'];
+        }else{
+            exit(json_encode($data['result']));
+        }
+    }
+    
     //获取账户余额
     public function getBalance()
     {
@@ -54,15 +66,4 @@ class Bittrex
         }        
     }
 
-    //获取币种情况
-    public function getticker($type)
-    {
-        $url = 'v1.1/public/getticker?market='.$type;
-        $data = $this->auth->reqPublic($url);
-        if($data['success']){
-            return $data['result'];
-        }else{
-            exit(json_encode($data['result']));
-        }
-    }
 }
