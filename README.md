@@ -1,8 +1,7 @@
 # bittrex
-[![Total Downloads](https://poser.pugx.org/vincenth520/bittrex/downloads.svg)](https://packagist.org/packages/vincenth520/bittrex)
-[![Latest Stable Version](https://img.shields.io/packagist/v/vincenth520/bittrex.svg)](https://packagist.org/packages/vincenth520/bittrex)
+[![Total Downloads](https://img.shields.io/packagist/dt/vincenth520/bittrex.svg)](https://packagist.org/packages/vincenth520/bittrex)
+[![License](https://img.shields.io/badge/bittrex-v1.1-brightgreen.svg)](https://bittrex.com/Home/Api)
 [![License](https://poser.pugx.org/vincenth520/bittrex/license.svg)](https://packagist.org/packages/vincenth520/bittrex)
-
 ## 安装
 - 通过composer，这是推荐的方式，可以使用composer.json 声明依赖，或者运行下面的命令。SDK 包已经放到这里 [vincenth520/bittrex](https://packagist.org/packages/vincenth520/bittrex) 。
 
