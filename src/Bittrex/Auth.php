@@ -1,6 +1,6 @@
 <?php
 
-namespace Bittrex\Auth;
+namespace Bittrex;
 
 class Auth
 {

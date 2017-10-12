@@ -1,6 +1,6 @@
 <?php
 
-namespace Bittrex\Bittrex;
+namespace Bittrex;
 
 use Bittrex\Auth;
 
@@ -10,7 +10,7 @@ class Bittrex
 
     public function __construct($apikey,$apisecret)
     {
-        $this->auth = new Auth\Auth($apikey,$apisecret);
+        $this->auth = new Auth($apikey,$apisecret);
     }
 
     //获取btc当前价格
