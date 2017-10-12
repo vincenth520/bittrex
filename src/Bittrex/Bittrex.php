@@ -43,7 +43,7 @@ class Bittrex
             
                 $newbalance[$k]['Currency'] = $v['Currency'];
                 $newbalance[$k]['balance'] = $v['Balance'];
-                $ticker = getticker('BTC-'.$v['Currency']);
+                $ticker = $this->getticker('BTC-'.$v['Currency']);
                 $newbalance[$k]['Last'] = $ticker['Last'];
                 $newbalance[$k]['estbtc'] = $v['Balance'] * $ticker['Last'];
                 $newbalance[$k]['estusd'] = $newbalance[$k]['estbtc'] * $btcPrice;            
