@@ -4,9 +4,9 @@
 	"version": "1.0.0",
 	"type": "library",
 	"keywords": ["bittrex","API","bitcoin"],
-	"homepage": "https://github.com/vincenth520",
+	"homepage": "https://github.com/vincenth520/bittrex",
 	"license": "MIT",
-	"author": [
+	"authors": [
 		{
 			"name": "vincent",
 			"email": "1091986039@qq.com",
