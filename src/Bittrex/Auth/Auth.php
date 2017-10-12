@@ -5,10 +5,16 @@ namespace Bittrex\Auth;
 class Auth
 {
     private $uri = 'https://bittrex.com/api/';
+    
     public function __construct($apikey,$apisecret)
     {
         $this->apikey = $apikey;
         $this->apisecret = $apisecret;
+    }
+
+    public function getUri()
+    {
+        return $this->uri;
     }
 
     public function sign($uri)
@@ -31,7 +37,7 @@ class Auth
     }
 
     //带秘钥访问
-    function reqPrivate($url)
+    public function reqPrivate($url)
     {	    
         $nonce = time();
         $uri = $this->uri.'v1.1/'.$url.'?apikey='.$this->apikey.'&nonce='.$nonce;
@@ -45,16 +51,6 @@ class Auth
         $output = curl_exec($curlobj);  
         curl_close($curlobj);  
         return json_decode($output,true);
-    }
-
-    //获取账户余额
-    public function getBalance()
-    {
-        $url = 'v2.0/pub/currencies/GetBTCPrice';
-        $data = getPublicUrl($url);
-        if($data['success']){
-            return $data['result']['bpi']['USD']['rate_float'];
-        }
     }
 }
 
