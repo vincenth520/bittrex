@@ -17,7 +17,7 @@ class Bittrex
     function getBtcPrice()
     {
         $url = 'v2.0/pub/currencies/GetBTCPrice';
-        $data = $this->auth->getPublicUrl($url);
+        $data = $this->auth->reqPublic($url);
         if($data['success']){
             return $data['result']['bpi']['USD']['rate_float'];
         }else{
@@ -30,7 +30,7 @@ class Bittrex
     {
         $url = 'account/getbalances';
 
-        $balance = $this->auth->getPrivateUrl($url);
+        $balance = $this->auth->reqPrivate($url);
 
         if($balance['success']){
             $balance = $balance['result'];	
@@ -58,7 +58,7 @@ class Bittrex
     public function getticker($type)
     {
         $url = 'v1.1/public/getticker?market='.$type;
-        $data = $this->auth->getPublicUrl($url);
+        $data = $this->auth->reqPublic($url);
         if($data['success']){
             return $data['result'];
         }else{
